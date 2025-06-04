@@ -14,10 +14,10 @@ const number3 = 200;
 
 // 🐶 Utilise la fonction `Math.max` pour trouver le nombre le plus grand
 // 📑 https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/max
-const maxNumber = Math.max(number1, number2, number3);
+
 
 // 🐶 Affiche le libelé “Le nombre le plus grand entre 5 10 200 est 200 !”
-displayText(`Le nombre le plus grand entre ${number1} ${number2} ${number3} est ${maxNumber} !`);
+displayText(`Le nombre le plus grand entre ${number1} ${number2} ${number3} est ${Math.max(number1, number2, number3)} !`);
 // à l'écran avec 'displayText'
 };
 export default () => <App exercice={exercice} />;
