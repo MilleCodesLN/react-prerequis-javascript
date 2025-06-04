@@ -2,10 +2,11 @@
 // ESModule Import / Export
 // http://localhost:3000/alone/exercise/01.js
 import { App } from "../lib/exerciseHelper"
-import * as roomHelper from "../exercise/helper/roomHelper";
+import roomHelper from "./helper/roomHelper";
 // 🐶 Importe 'init' et 'displayText' du module qui permet d'afficher un texte dans la page de l'exercice
 //  🤖 import displayText, { init } from "../lib/exerciseHelper";
 import displayText, { init } from "../lib/exerciseHelper";
+import { calculPerimetre, TEMP_MAX } from "./helper/roomHelper";
 // 🐶 Importe le module qui permet de manipuler les pièces
 const exercice = () => {
 // 🐶 Affiche 'HelloWorld' dans la page grace à la fonction `displayText` importée
@@ -24,11 +25,11 @@ displayText("Hello World");
 // 🐶 Utilise ces 3 fonctions pour créér les bons libéllés
 // 🤖 let lib = "Air de d'un pièce de 2 par 5 donne " + ...
 // Utilise displayText pour afficher ces 3 libéllés
-let lib = "Air d'une pièce de 2 par 5 donne " + roomHelper.calculAir(2, 5);
+let lib = "Air d'une pièce de 2 par 5 donne " + roomHelper(2, 5);
 displayText(lib);
-lib = "Périmètre d'une pièce de 2 par 5 donne " + roomHelper.calculPerimetre(2, 5);
+lib = "Périmètre d'une pièce de 2 par 5 donne " + calculPerimetre(2, 5);
 displayText(lib);
-lib = "Température maximale est " + roomHelper.TEMP_MAX;
+lib = "Température maximale est " + TEMP_MAX;
 displayText(lib);
 };  
 export default () => <App exercice={exercice} />;
