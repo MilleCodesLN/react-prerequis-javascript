@@ -31,10 +31,10 @@ calculNombrePair(3).then( e => displayText(`appel promise : ${e}`), err => displ
   // 🤖 await calculNombrePair
 
   const calculNombrePairAsync = async () => {
-   
+    try {
       let result = await calculNombrePair(2)
       displayText(`calculNombrePairAsync : ${result}`)
-     try {
+    
       result = await calculNombrePair(3)
       displayText(`calculNombrePairAsync :  ${result}`) // ne devrait pas logger
     } catch (error) {
